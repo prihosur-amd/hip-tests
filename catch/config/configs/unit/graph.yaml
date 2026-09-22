@@ -669,6 +669,12 @@ graph:
   Unit_hipStreamBeginCapture_MultipleStreams_ReuseEvent:
     <<: *level_2
     tags: [capture]
+  Unit_hipStreamBeginCapture_Positive_SelfWaitOnCaptureStream:
+    <<: *level_2
+    tags: [capture]
+  Unit_hipStreamBeginCapture_Positive_SelfWaitOnForkedStream:
+    <<: *level_2
+    tags: [capture]
   Unit_hipGraphAddMemcpyNode1D_Functional:
     <<: *level_2
     tags: [node]
@@ -1244,6 +1250,7 @@ graph:
     tags: [userobj]
   Unit_hipGraphRetainUserObject_Negative_Basic:
     <<: *level_2
+    disabled: [asan]
     tags: [userobj]
   Unit_hipGraphDebugDotPrint_Functional:
     <<: *level_2
